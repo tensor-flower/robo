@@ -9,7 +9,7 @@ export const setSearchField = (text)=>({
 
 export const requestRobots = ()=>(dispatch)=>{
     dispatch({type:REQUEST_PENDING})
-    fetch('http://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users')
     .then(response=>response.json())
     .then(data=>{
         dispatch({type:REQUEST_SUCCESS,payload:data})
